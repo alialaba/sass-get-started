@@ -1,0 +1,10 @@
+1.Variables: 
+e.g $primary-color:black; >  h1{color:$primary-color;}
+2.map
+e.g $font-weight:( regular:"300", medium:"500", bold:"700", x-bold:"900", ) > font-weight: map-get($font-weights, bold);
+3.nesting
+3a:using sass ampersand(read more on this and know how to use it)
+4.sass partials(seperate files (it makes sass not to generate a css file))
+4b @import "name";
+5.inbuilt function
+5a.lighten(var,20%)

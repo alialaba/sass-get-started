@@ -1,0 +1,125 @@
+@import "resets";
+@import "variables";
+@import "config";
+@import "buttons";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+body {
+    background: $light-color;
+    line-height: 1.6;
+    font-family: $font-stack;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.showcase {
+    padding: 1em 0;
+    .menu-btn {
+        cursor: pointer;
+        height: 3em;
+        width: 3em;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .hamburger {
+            width: 60%;
+            position: relative;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            background: $dark-color;
+            height: 3px;
+            position: absolute;
+            border-radius: 10px;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            width: 100%;
+            content: "";
+        }
+        .hamburger::before {
+            transform: translateY(9px);
+        }
+    }
+    .nav {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+        .nav__item {
+            list-style: none;
+            text-align: left;
+            margin-top: .5em;
+        }
+        .nav__link {
+            color: $dark-color;
+            font-size: 1.1rem;
+        }
+    }
+    .nav-visible {
+        visibility: visible;
+        height: auto;
+        position: relative;
+    }
+}
+
+.hero {
+    color: $white-color;
+    height: 100%;
+    // padding: 100px 0;
+    background: $primary-color;
+    h1 {
+        font-weight: map-get($font-weights, bold);
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+}
+
+@media(min-width:768px) {
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .showcase {
+        .menu-btn {
+            display: none;
+            // visibility: hidden;
+        }
+        .nav {
+            visibility: visible;
+            position: relative;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .nav__list {
+                display: flex;
+                margin: 0;
+            }
+            .nav__item {
+                margin: 0 0 0 2.5em;
+            }
+        }
+    }
+    .hero {
+        img {
+            width: 50%;
+            align-self: flex-start;
+        }
+        .hero-content {
+            margin: 100px 0;
+        }
+    }
+}

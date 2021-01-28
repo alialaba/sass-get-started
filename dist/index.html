@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn SASS</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+
+<body>
+    <header class="showcase">
+        <div class="container row">
+            <div class="menu-btn">
+                <span class="hamburger"></span>
+            </div>
+            <h3 class="logo">My Website</h3>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                    <!-- <li> <a href="#">Sign In</a></li> -->
+
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="container row">
+            <div class="hero-content">
+                <h1>Make Your Marketing Real</h1>
+                <p class="my-1">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eligendi tempore atque laborum. Quisquam nemo at non. Corrupti, vitae dolore.
+                </p>
+                <a href="#" class="btn-primary">Learn More</a>
+                <a href="#" class="btn-secondary">Sign Up</a>
+            </div>
+            <img src="https://themesbrand.com/zooki/layouts/images/home-2-img.png">
+        </div>
+    </div>
+    <script>
+        const nav = document.querySelector(".nav");
+        const menuBtn = document.querySelector(".menu-btn");
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("nav-visible")
+                // console.log("clicked")
+
+        })
+    </script>
+</body>
+
+</html>
